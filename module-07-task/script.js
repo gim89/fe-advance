@@ -113,118 +113,184 @@
 
 //<<<-----------------------------ЗАДАНИЕ №3--------------------------------->>>
 
-const user = {
-    imgOne: 'img-one.jpg',
-    imgTwo: 'img-two.jpg',
-    imgThree: 'img-three.jpg',
-    nameOne: 'Claudia Cardinale',
-    nameTwo: 'Dgenifer Ponola',
-    nameThree: 'Filana Guful',
-    ageOne: 29,
-    ageTwo: 41,
-    ageThree: 23,
-    locationOne: 'Philadelphia, PA',
-    locationTwo: 'California, PA',
-    locationThree: 'California, PA',
-    strawberriesOne: 19,
-    strawberriesTwo: 20,
-    strawberriesThree: 21,
-    lemonsOne: 5,
-    lemonsTwo: 6,
-    lemonsThree: 7,
-    createUserCardOne () {
-        const postOne = `
-            <div class="container">
-                <div class="block">
-                    <img class="img" src="${this.imgOne}">
-                    <p class="text">${this.nameOne}</p>
-                    <span class="span">${this.ageOne}${this.locationOne}</span>
-                    <div class="card">
-                        <span class="card-span">
-                            <img class="card-img" src="strawberry.png">
-                            <i class="card-i">${this.strawberriesOne}</i>
-                        </span>
-                        <span class="card-span">
-                            <img class="card-img" src="lime.png">
-                            <i class="card-i">${this.lemonsOne}</i>
-                        </span>
-                        <span class="card-span">
-                            <img class="card-img card-img-three" src="interface.png">
-                        </span>
+// const user = {
+//     imgOne: 'img-one.jpg',
+//     imgTwo: 'img-two.jpg',
+//     imgThree: 'img-three.jpg',
+//     nameOne: 'Claudia Cardinale',
+//     nameTwo: 'Dgenifer Ponola',
+//     nameThree: 'Filana Guful',
+//     ageOne: 29,
+//     ageTwo: 41,
+//     ageThree: 23,
+//     locationOne: 'Philadelphia, PA',
+//     locationTwo: 'California, PA',
+//     locationThree: 'California, PA',
+//     strawberriesOne: 19,
+//     strawberriesTwo: 20,
+//     strawberriesThree: 21,
+//     lemonsOne: 5,
+//     lemonsTwo: 6,
+//     lemonsThree: 7,
+//     createUserCardOne () {
+//         const postOne = `
+//             <div class="container">
+//                 <div class="block">
+//                     <img class="img" src="${this.imgOne}">
+//                     <p class="text">${this.nameOne}</p>
+//                     <span class="span">${this.ageOne}${this.locationOne}</span>
+//                     <div class="card">
+//                         <span class="card-span">
+//                             <img class="card-img" src="strawberry.png">
+//                             <i class="card-i">${this.strawberriesOne}</i>
+//                         </span>
+//                         <span class="card-span">
+//                             <img class="card-img" src="lime.png">
+//                             <i class="card-i">${this.lemonsOne}</i>
+//                         </span>
+//                         <span class="card-span">
+//                             <img class="card-img card-img-three" src="interface.png">
+//                         </span>
+//                     </div>
+//                 </div>
+//             </div>
+//         `;
+//
+//         return postOne;
+//     },
+//     createUserCardTwo () {
+//         const postTwo = `
+//             <div class="container">
+//                 <div class="block">
+//                     <img class="img" src="${this.imgTwo}">
+//                     <p class="text">${this.nameTwo}</p>
+//                     <span class="span">${this.ageTwo}${this.locationTwo}</span>
+//                     <div class="card">
+//                         <span class="card-span">
+//                             <img class="card-img" src="strawberry.png">
+//                             <i class="card-i">${this.strawberriesTwo}</i>
+//                         </span>
+//                         <span class="card-span">
+//                             <img class="card-img" src="lime.png">
+//                             <i class="card-i">${this.lemonsTwo}</i>
+//                         </span>
+//                         <span class="card-span">
+//                             <img class="card-img card-img-three" src="interface.png">
+//                         </span>
+//                     </div>
+//                 </div>
+//             </div>
+//         `;
+//
+//         return postTwo;
+//     },
+//     createUserCardThree () {
+//         const postThree = `
+//             <div class="container">
+//                 <div class="block">
+//                     <img class="img" src="${this.imgThree}">
+//                     <p class="text">${this.nameThree}</p>
+//                     <span class="span">${this.ageThree}${this.locationThree}</span>
+//                     <div class="card">
+//                         <span class="card-span">
+//                             <img class="card-img" src="strawberry.png">
+//                             <i class="card-i">${this.strawberriesThree}</i>
+//                         </span>
+//                         <span class="card-span">
+//                             <img class="card-img" src="lime.png">
+//                             <i class="card-i">${this.lemonsThree}</i>
+//                         </span>
+//                         <span class="card-span">
+//                             <img class="card-img card-img-three" src="interface.png">
+//                         </span>
+//                     </div>
+//                 </div>
+//             </div>
+//         `;
+//
+//         return postThree;
+//     }
+//
+// };
+//
+//     function go() {
+//
+//       const postOne      =  user.createUserCardOne();
+//       const postTwo      =  user.createUserCardTwo();
+//       const postThree    =  user.createUserCardThree();
+//
+//       const body         =  document.querySelector("body");
+//
+//       body.insertAdjacentHTML('afterbegin', postOne);
+//       body.insertAdjacentHTML('afterbegin', postTwo);
+//       body.insertAdjacentHTML('afterbegin', postThree);
+//
+//     }
+//
+//     go();
+
+// imgOne: 'img-one.jpg',
+//     imgTwo: 'img-two.jpg',
+//     imgThree: 'img-three.jpg',
+//     nameOne: 'Claudia Cardinale',
+//     nameTwo: 'Dgenifer Ponola',
+//     nameThree: 'Filana Guful',
+//     ageOne: 29,
+//     ageTwo: 41,
+//     ageThree: 23,
+//     locationOne: 'Philadelphia, PA',
+//     locationTwo: 'California, PA',
+//     locationThree: 'California, PA',
+//     strawberriesOne: 19,
+//     strawberriesTwo: 20,
+//     strawberriesThree: 21,
+//     lemonsOne: 5,
+//     lemonsTwo: 6,
+//     lemonsThree: 7,
+//
+function User (img, name, age, location, strawberries, lemons) {
+    this.img = img;
+    this.name = name;
+    this.age = age;
+    this.location = location;
+    this.strawberries = strawberries;
+    this.lemons = lemons;
+}
+
+const userOne       = new User('img-one.jpg', 'Claudia Cardinale', 29, 'Philadelphia, PA', 19, 5);
+const userTwo       = new User('img-two.jpg', 'Dgenifer Ponola', 29, 'California, PA', 20, 6);
+const userThree     = new User('img-three.jpg', 'Filana Guful', 29, 'California, PA', 21, 7);
+//
+// console.log(user);
+
+const createUserCard = function () {
+    const post = `
+                <div class="container">
+                    <div class="block">
+                        <img class="img" src="${this.img}">
+                        <p class="text">${this.name}</p>
+                        <span class="span">${this.age} ${this.location}</span>
+                        <div class="card">
+                            <span class="card-span">
+                                <img class="card-img" src="strawberry.png">
+                                <i class="card-i">${this.strawberries}</i>
+                            </span>
+                            <span class="card-span">
+                                <img class="card-img" src="lime.png">
+                                <i class="card-i">${this.lemons}</i>
+                            </span>
+                            <span class="card-span">
+                                <img class="card-img card-img-three" src="interface.png">
+                            </span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        `;
+            `;
+    return post;
+}
 
-        return postOne;
-    },
-    createUserCardTwo () {
-        const postTwo = `
-            <div class="container">
-                <div class="block">
-                    <img class="img" src="${this.imgTwo}">
-                    <p class="text">${this.nameTwo}</p>
-                    <span class="span">${this.ageTwo}${this.locationTwo}</span>
-                    <div class="card">
-                        <span class="card-span">
-                            <img class="card-img" src="strawberry.png">
-                            <i class="card-i">${this.strawberriesTwo}</i>
-                        </span>
-                        <span class="card-span">
-                            <img class="card-img" src="lime.png">
-                            <i class="card-i">${this.lemonsTwo}</i>
-                        </span>
-                        <span class="card-span">
-                            <img class="card-img card-img-three" src="interface.png">
-                        </span>
-                    </div>
-                </div>
-            </div>
-        `;
+const body      = document.querySelector("body");
 
-        return postTwo;
-    },
-    createUserCardThree () {
-        const postThree = `
-            <div class="container">
-                <div class="block">
-                    <img class="img" src="${this.imgThree}">
-                    <p class="text">${this.nameThree}</p>
-                    <span class="span">${this.ageThree}${this.locationThree}</span>
-                    <div class="card">
-                        <span class="card-span">
-                            <img class="card-img" src="strawberry.png">
-                            <i class="card-i">${this.strawberriesThree}</i>
-                        </span>
-                        <span class="card-span">
-                            <img class="card-img" src="lime.png">
-                            <i class="card-i">${this.lemonsThree}</i>
-                        </span>
-                        <span class="card-span">
-                            <img class="card-img card-img-three" src="interface.png">
-                        </span>
-                    </div>
-                </div>
-            </div>
-        `;
-
-        return postThree;
-    }
-
-};
-
-    function go() {
-
-      const postOne      =  user.createUserCardOne();
-      const postTwo      =  user.createUserCardTwo();
-      const postThree    =  user.createUserCardThree();
-
-      const body         =  document.querySelector("body");
-
-      body.insertAdjacentHTML('afterbegin', postOne);
-      body.insertAdjacentHTML('afterbegin', postTwo);
-      body.insertAdjacentHTML('afterbegin', postThree);
-
-    }
-
-    go();
+body.innerHTML  = createUserCard.call(userOne);
+body.innerHTML += createUserCard.call(userTwo);
+body.innerHTML += createUserCard.call(userThree);
