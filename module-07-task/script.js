@@ -1,7 +1,6 @@
 "use strict"
 
 
-
 //<<<-----------------------------ЗАДАНИЕ №1--------------------------------->>>
 
 // function createUserCard() {
@@ -231,49 +230,49 @@
 
 //<<<-----------------------------ЗАДАНИЕ №3(2)------------------------------>>>
 
-function User (img, name, age, location, strawberries, lemons) {
-    this.img = img;
-    this.name = name;
-    this.age = age;
-    this.location = location;
-    this.strawberries = strawberries;
-    this.lemons = lemons;
-}
-
-const userOne       = new User('img-one.jpg', 'Claudia Cardinale', 29, 'Philadelphia, PA', 19, 5);
-const userTwo       = new User('img-two.jpg', 'Dgenifer Ponola', 29, 'California, PA', 20, 6);
-const userThree     = new User('img-three.jpg', 'Filana Guful', 29, 'California, PA', 21, 7);
+// function User (img, name, age, location, strawberries, lemons) {
+//     this.img = img;
+//     this.name = name;
+//     this.age = age;
+//     this.location = location;
+//     this.strawberries = strawberries;
+//     this.lemons = lemons;
+// }
 //
-const createUserCard = function () {
-    return `
-                <div class="container">
-                    <div class="block">
-                        <img class="img" src="${this.img}">
-                        <p class="text">${this.name}</p>
-                        <span class="span">${this.age} ${this.location}</span>
-                        <div class="card">
-                            <span class="card-span">
-                                <img class="card-img" src="strawberry.png">
-                                <i class="card-i">${this.strawberries}</i>
-                            </span>
-                            <span class="card-span">
-                                <img class="card-img" src="lime.png">
-                                <i class="card-i">${this.lemons}</i>
-                            </span>
-                            <span class="card-span">
-                                <img class="card-img card-img-three" src="interface.png">
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            `;
-}
-
-const body      = document.querySelector("body");
-
-body.innerHTML  = createUserCard.call(userOne);
-body.innerHTML += createUserCard.call(userTwo);
-body.innerHTML += createUserCard.call(userThree);
+// const userOne       = new User('img-one.jpg', 'Claudia Cardinale', 29, 'Philadelphia, PA', 19, 5);
+// const userTwo       = new User('img-two.jpg', 'Dgenifer Ponola', 29, 'California, PA', 20, 6);
+// const userThree     = new User('img-three.jpg', 'Filana Guful', 29, 'California, PA', 21, 7);
+// //
+// const createUserCard = function () {
+//     return `
+//                 <div class="container">
+//                     <div class="block">
+//                         <img class="img" src="${this.img}">
+//                         <p class="text">${this.name}</p>
+//                         <span class="span">${this.age} ${this.location}</span>
+//                         <div class="card">
+//                             <span class="card-span">
+//                                 <img class="card-img" src="strawberry.png">
+//                                 <i class="card-i">${this.strawberries}</i>
+//                             </span>
+//                             <span class="card-span">
+//                                 <img class="card-img" src="lime.png">
+//                                 <i class="card-i">${this.lemons}</i>
+//                             </span>
+//                             <span class="card-span">
+//                                 <img class="card-img card-img-three" src="interface.png">
+//                             </span>
+//                         </div>
+//                     </div>
+//                 </div>
+//             `;
+// }
+//
+// const body      = document.querySelector("body");
+//
+// body.innerHTML  = createUserCard.call(userOne);
+// body.innerHTML += createUserCard.call(userTwo);
+// body.innerHTML += createUserCard.call(userThree);
 
 
 
@@ -310,3 +309,69 @@ body.innerHTML += createUserCard.call(userThree);
 // body.innerHTML  = createUserCard('img-one.jpg', 'Claudia Cardinale', 29, 'Philadelphia, PA', 19, 5);
 // body.innerHTML += createUserCard('img-two.jpg', 'Dgenifer Ponola', 29, 'California, PA', 20, 6);
 // body.innerHTML += createUserCard('img-three.jpg', 'Filana Guful', 29, 'California, PA', 21, 7);
+
+
+
+//<<<-----------------------------ЗАДАНИЕ №3(4)------------------------------>>>
+
+
+const userOne = {
+
+    img: 'img-one.jpg',
+    name: 'Claudia Cardinale',
+    age: 29,
+    location: 'Philadelphia, PA',
+    strawberries: 19,
+    lemons: 5
+}
+
+const userTwo = {
+
+    img: 'img-two.jpg',
+    name: 'Dgenifer Ponola',
+    age: 41,
+    location: 'California, PA',
+    strawberries: 20,
+    lemons: 6
+}
+
+const userThree = {
+
+    img: 'img-three.jpg',
+    name: 'Filana Guful',
+    age: 23,
+    location: 'California, PA',
+    strawberries: 21,
+    lemons: 7
+}
+
+const createUserCard = function (user) {
+    return `
+            <div class="container">
+                <div class="block">
+                    <img class="img" src="${this.img}">
+                    <p class="text">${this.name}</p>
+                    <span class="span">${this.age} ${this.location}</span>
+                    <div class="card">
+                        <span class="card-span">
+                            <img class="card-img" src="strawberry.png">
+                            <i class="card-i">${this.strawberries}</i>
+                        </span>
+                        <span class="card-span">
+                            <img class="card-img" src="lime.png">
+                            <i class="card-i">${this.lemons}</i>
+                        </span>
+                        <span class="card-span">
+                            <img class="card-img card-img-three" src="interface.png">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        `;
+}
+
+const body      = document.querySelector("body");
+
+body.innerHTML  = createUserCard.call(userOne);
+body.innerHTML += createUserCard.call(userTwo);
+body.innerHTML += createUserCard.call(userThree);
