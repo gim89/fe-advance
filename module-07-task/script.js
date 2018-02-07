@@ -111,7 +111,7 @@
 
 
 
-//<<<-----------------------------ЗАДАНИЕ №3--------------------------------->>>
+//<<<-----------------------------ЗАДАНИЕ №3(1)------------------------------>>>
 
 // const user = {
 //     imgOne: 'img-one.jpg',
@@ -229,25 +229,8 @@
 //
 //     go();
 
-// imgOne: 'img-one.jpg',
-//     imgTwo: 'img-two.jpg',
-//     imgThree: 'img-three.jpg',
-//     nameOne: 'Claudia Cardinale',
-//     nameTwo: 'Dgenifer Ponola',
-//     nameThree: 'Filana Guful',
-//     ageOne: 29,
-//     ageTwo: 41,
-//     ageThree: 23,
-//     locationOne: 'Philadelphia, PA',
-//     locationTwo: 'California, PA',
-//     locationThree: 'California, PA',
-//     strawberriesOne: 19,
-//     strawberriesTwo: 20,
-//     strawberriesThree: 21,
-//     lemonsOne: 5,
-//     lemonsTwo: 6,
-//     lemonsThree: 7,
-//
+//<<<-----------------------------ЗАДАНИЕ №3(2)------------------------------>>>
+
 function User (img, name, age, location, strawberries, lemons) {
     this.img = img;
     this.name = name;
@@ -261,10 +244,8 @@ const userOne       = new User('img-one.jpg', 'Claudia Cardinale', 29, 'Philadel
 const userTwo       = new User('img-two.jpg', 'Dgenifer Ponola', 29, 'California, PA', 20, 6);
 const userThree     = new User('img-three.jpg', 'Filana Guful', 29, 'California, PA', 21, 7);
 //
-// console.log(user);
-
 const createUserCard = function () {
-    const post = `
+    return `
                 <div class="container">
                     <div class="block">
                         <img class="img" src="${this.img}">
@@ -286,7 +267,6 @@ const createUserCard = function () {
                     </div>
                 </div>
             `;
-    return post;
 }
 
 const body      = document.querySelector("body");
@@ -294,3 +274,39 @@ const body      = document.querySelector("body");
 body.innerHTML  = createUserCard.call(userOne);
 body.innerHTML += createUserCard.call(userTwo);
 body.innerHTML += createUserCard.call(userThree);
+
+
+
+//<<<-----------------------------ЗАДАНИЕ №3(3)------------------------------>>>
+
+
+// const createUserCard = function (img, name, age, location, strawberries, lemons) {
+//     return `
+//                 <div class="container">
+//                     <div class="block">
+//                         <img class="img" src="${img}">
+//                         <p class="text">${name}</p>
+//                         <span class="span">${age} ${location}</span>
+//                         <div class="card">
+//                             <span class="card-span">
+//                                 <img class="card-img" src="strawberry.png">
+//                                 <i class="card-i">${strawberries}</i>
+//                             </span>
+//                             <span class="card-span">
+//                                 <img class="card-img" src="lime.png">
+//                                 <i class="card-i">${lemons}</i>
+//                             </span>
+//                             <span class="card-span">
+//                                 <img class="card-img card-img-three" src="interface.png">
+//                             </span>
+//                         </div>
+//                     </div>
+//                 </div>
+//             `;
+// }
+//
+// const body      = document.querySelector("body");
+//
+// body.innerHTML  = createUserCard('img-one.jpg', 'Claudia Cardinale', 29, 'Philadelphia, PA', 19, 5);
+// body.innerHTML += createUserCard('img-two.jpg', 'Dgenifer Ponola', 29, 'California, PA', 20, 6);
+// body.innerHTML += createUserCard('img-three.jpg', 'Filana Guful', 29, 'California, PA', 21, 7);
