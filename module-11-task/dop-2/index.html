@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <table class="centered bordered highlight">
+  <thead>
+    <tr>
+      <th>Валюта</th>
+      <th>Покупка</th>
+      <th>Продажа</th>
+    </tr>
+  </thead>
+  <tbody id="js-tbody"></tbody>
+</table>
+
+<button id="js-btn" class="btn">Получить</button>
+
+<!-- Шаблон одной строки для tbody -->
+<script type="text/template" id="table-row">
+  <tr scope="row">
+    <td><%- id%></td>
+    <td><%- name%></td>
+    <td><%- score%></td>
+  </tr>
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
